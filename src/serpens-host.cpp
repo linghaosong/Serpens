@@ -61,7 +61,7 @@ int main(int argc, char **argv) {
     vector<int> CSRColIndex;
     vector<float> CSRVal;
 
-    cout << "Reading sparse A matrix for " << NUM_CH_SPARSE << " HBM channels ...";
+    cout << "Reading sparse A matrix ...";
 
     read_suitsparse_matrix(filename_A,
                            CSCColPtr,
@@ -104,7 +104,7 @@ int main(int argc, char **argv) {
     
     cout << "done\n";
 
-    cout << "Preparing sparse A for FPGA ...";
+    cout << "Preparing sparse A for FPGA with " << NUM_CH_SPARSE << " HBM channels ...";
 
     vector<vector<edge> > edge_list_pes;
     vector<int> edge_list_ptr;
