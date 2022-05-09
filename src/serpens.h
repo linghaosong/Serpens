@@ -5,6 +5,7 @@
 #include <tapa.h>
 
 constexpr int NUM_CH_SPARSE = 16;
+//constexpr int NUM_CH_SPARSE = 24;
 
 constexpr int WINDOW_SIZE = 8192;
 constexpr int DEP_DIST_LOAD_STORE = 10;
