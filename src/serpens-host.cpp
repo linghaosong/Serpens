@@ -61,7 +61,7 @@ int main(int argc, char **argv) {
     vector<int> CSRColIndex;
     vector<float> CSRVal;
 
-    cout << "Reading sparse A matrix...";
+    cout << "Reading sparse A matrix for " << NUM_CH_SPARSE << " HBM channels ...";
 
     read_suitsparse_matrix(filename_A,
                            CSCColPtr,
