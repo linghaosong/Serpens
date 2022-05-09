@@ -123,9 +123,9 @@ void load_S_matrix(FILE * f_A,
     }
     
     if (!mm_is_symmetric(matcode)) {
-      cout << "It's an NS matrix.\n";
+        cout << "It's an NS matrix.\n";
     } else {
-      cout << "It's an S matrix.\n";
+        cout << "It's an S matrix.\n";
     }
     
     int r_idx, c_idx;
@@ -189,17 +189,17 @@ void read_suitsparse_matrix(char * filename_A,
         cout << "The input matrix file " << filename_A << "is not a coordinate file!" << endl;
         exit(1);
     }
-
+    
     int nnz_alloc = (mm_is_symmetric(matcode))? (nnz_mmio * 2): nnz_mmio;
     cout << "Matrix A -- #row: " << M << " #col: " << K << endl;
-
+    
     vector<int> cooRowIndex(nnz_alloc);
     vector<int> cooColIndex(nnz_alloc);
     //eleIndex.resize(nnz_alloc);
     eleVal.resize(nnz_alloc);
-
+    
     cout << "Loading input matrix A from " << filename_A << "\n";
-
+    
     load_S_matrix(f_A, nnz_mmio, nnz, cooRowIndex, cooColIndex, eleVal, matcode);
     
     fclose(f_A);
@@ -482,6 +482,7 @@ void edge_list_64bit(const vector<vector<edge> > & edge_list_pes,
                     
                     int pix_m24 = pe_idx % 24;
                     sparse_A_fpga_vec[(pix_m24 % 8) * 3 + pix_m24 / 8][(pe_idx % 192) / 24 + i * 8] = x;
+                }
             }
         }
     }
