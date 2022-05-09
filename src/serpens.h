@@ -10,7 +10,7 @@ constexpr int NUM_CH_SPARSE = 16;
 constexpr int WINDOW_SIZE = 8192;
 constexpr int DEP_DIST_LOAD_STORE = 10;
 constexpr int X_PARTITION_FACTOR = 8;
-constexpr int URAM_DEPTH = (48 / NUM_CH_SPARSE) * 4096; / 16 -> 12,288, 24 -> 8,192
+constexpr int URAM_DEPTH = (48 / NUM_CH_SPARSE) * 4096; // 16 -> 12,288, 24 -> 8,192
 
 using float_v16 = tapa::vec_t<float, 16>;
 
