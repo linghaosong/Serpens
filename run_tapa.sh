@@ -6,7 +6,7 @@ tapac \
   --clock-period 3.33 \
   -o Serpens.xo \
   --constraint Serpens_floorplan.tcl \
-  --connectivity ../link_config.ini \
+  --connectivity ../link_config_a16.ini \
   --read-only-args edge_list_ptr \
   --read-only-args edge_list_ch* \
   --read-only-args vec_X \
