@@ -35,7 +35,7 @@ We provide the generated bitstream. If you have a U280 FPGA ready, you don't nee
     TAPAB=../bitstream/Serpens_xilinx_u280_xdma_201920_3.xclbin ./serpens ../matrices/nasa4704/nasa4704.mtx
 
 
-To learn more about the techinqual details, please see [this link](https://arxiv.org/abs/2109.11081).
+To learn more about the techinqual details, please see [this link](https://arxiv.org/abs/2111.12555).
 
 
 If you find this code useful, please cite:
