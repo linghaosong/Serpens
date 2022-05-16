@@ -1,3 +1,5 @@
+[![DOI](https://zenodo.org/badge/480584531.svg)](https://zenodo.org/badge/latestdoi/480584531)
+
 # Serpens
 
 Serpens is an HBM FPGA accelerator for SpMV. 
