@@ -34,7 +34,7 @@ After HLS, a bitstream generator file *Serpens_generate_bitstream.sh* is generat
 ## To run the accelerator on board:
 We provide the generated bitstream. If you have a U280 FPGA ready, you don't need to generate the hwardware again, just run
 
-    TAPAB=../bitstream/Serpens_xilinx_u280_xdma_201920_3.xclbin ./serpens ../matrices/nasa4704/nasa4704.mtx
+    TAPAB=../bitstream_a16/Serpens_xilinx_u280_xdma_201920_3.xclbin ./serpens ../matrices/nasa4704/nasa4704.mtx
 
 
 To learn more about the techinqual details, please see [this link](https://arxiv.org/abs/2111.12555).
