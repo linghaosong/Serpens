@@ -11,7 +11,14 @@ Dependencies:
 + Vitis 2021.2
 + Xilinx xilinx_u280_xdma_201920_3 shell and a Xilinx U280 FPGA card.
 
+### Input matrix format & sample input
+The host code takes martrix market format(https://math.nist.gov/MatrixMarket/formats.html). We test on sparse matrices from SuiteSparse(https://sparse.tamu.edu) collection. To download a sample matrix for running, do
 
+    mkdir matrices
+    sh download_example.sh
+    cmake ..
+    make swsim
+    
 ## To do software emulation:
 
     mkdir build
