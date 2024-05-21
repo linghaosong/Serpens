@@ -429,10 +429,7 @@ void edge_list_64bit(const vector<vector<edge> > & edge_list_pes,
                     
                     x = x_col | x_row | x_float_val_64;
                 }
-                if (NUM_CH_SPARSE != 16 && NUM_CH_SPARSE != 24) {
-                    cout << "UPDATE me\n";
-                    exit(1);
-                }else if (NUM_CH_SPARSE == 16) {
+                if (NUM_CH_SPARSE == 16) {
                     int pe_idx = j + cc * 8;
                     //ch= 0: pe  0(  0,   1) pe 16( 32,  33) pe 32( 64,  65) pe 48( 96,  97) pe 64(128, 129) pe 80(160, 161) pe 96(192, 193) pe112(224, 225)
                     //ch= 1: pe  8( 16,  17) pe 24( 48,  49) pe 40( 80,  81) pe 56(112, 113) pe 72(144, 145) pe 88(176, 177) pe104(208, 209) pe120(240, 241)
@@ -482,6 +479,17 @@ void edge_list_64bit(const vector<vector<edge> > & edge_list_pes,
                     
                     int pix_m24 = pe_idx % 24;
                     sparse_A_fpga_vec[(pix_m24 % 8) * 3 + pix_m24 / 8][(pe_idx % 192) / 24 + i * 8] = x;
+                }else if ( (NUM_CH_SPARSE == 32) ||
+                           (NUM_CH_SPARSE == 40) ||
+                           (NUM_CH_SPARSE == 48) ||
+                           (NUM_CH_SPARSE == 56)
+                         ) {
+                    int pe_idx = j + cc * 8;
+                    int pix_m = pe_idx % NUM_CH_SPARSE;
+                    sparse_A_fpga_vec[(pix_m % 8) * (NUM_CH_SPARSE / 8) + pix_m / 8][(pe_idx % (NUM_CH_SPARSE * 8)) / NUM_CH_SPARSE + i * 8] = x;
+                }else {
+                    cout << "UPDATE me\n";
+                    exit(1);
                 }
             }
         }

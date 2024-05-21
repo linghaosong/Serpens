@@ -5,12 +5,12 @@
 #include <tapa.h>
 
 //constexpr int NUM_CH_SPARSE = 16;
-constexpr int NUM_CH_SPARSE = 24;
+constexpr int NUM_CH_SPARSE = 56; //or, 32, 40, 48, 56
 
 constexpr int WINDOW_SIZE = 8192;
 constexpr int DEP_DIST_LOAD_STORE = 10;
 constexpr int X_PARTITION_FACTOR = 8;
-constexpr int URAM_DEPTH = (48 / NUM_CH_SPARSE) * 4096; // 16 -> 12,288, 24 -> 8,192
+constexpr int URAM_DEPTH = ((NUM_CH_SPARSE == 16)? 3 : 2) * 4096; // 16 -> 12,288, others -> 8,192
 
 using float_v16 = tapa::vec_t<float, 16>;
 
