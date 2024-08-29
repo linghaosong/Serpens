@@ -5,7 +5,7 @@
 #include <tapa.h>
 
 //constexpr int NUM_CH_SPARSE = 16;
-constexpr int NUM_CH_SPARSE = 56; //or, 32, 40, 48, 56
+constexpr int NUM_CH_SPARSE = 24; //or, 32, 40, 48, 56
 
 constexpr int WINDOW_SIZE = 8192;
 constexpr int DEP_DIST_LOAD_STORE = 10;
